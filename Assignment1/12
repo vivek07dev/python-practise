@@ -1,0 +1,12 @@
+name = input("Enter student name: ")
+
+m1 = float(input("Enter marks of subject 1: "))
+m2 = float(input("Enter marks of subject 2: "))
+m3 = float(input("Enter marks of subject 3: "))
+
+total = m1 + m2 + m3
+percentage = total / 3
+
+print("Student Name:", name)
+print("Total Marks:", total)
+print("Percentage:", percentage, "%")
