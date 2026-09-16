@@ -1,0 +1,16 @@
+# Integers,
+# String,Float,boolean,None
+
+# name1 = "vivek"
+# name2="prasad"
+# name3="rahul"
+
+# print(name1)
+# print(name3)
+# print(name2)
+
+age = 23
+old=True
+a = None
+print(type(old))
+print(type(a))
