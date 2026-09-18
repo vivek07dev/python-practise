@@ -1,0 +1,8 @@
+num = int(input("Enter number: "))
+start = int(input("Enter starting range: "))
+end = int(input("Enter ending range: "))
+
+if start <= num <= end:
+    print("Number lies within the range")
+else:
+    print("Number is outside the range")
