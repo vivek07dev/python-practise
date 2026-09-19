@@ -1,0 +1,15 @@
+name = input(" Enter student name:")
+
+m1 = int(input("Enter the math:"))
+m2 = int(input("Enter the physics:"))
+m3 = int(input("Enter the dbms:"))
+m4 = int(input("Enter the daa"))
+
+total = m1+m2+m3+m4
+percentage = total/5
+
+print("Student name:=",name)
+print("total Marks:=",total)
+print("percentage:=",percentage,"%")
+
+
