@@ -1,9 +1,3 @@
-# var-name={
-#     "key": "value",
-#     "key": "value",
-#     "key": "value",
-
-# }
 
 
 # dict={
@@ -19,6 +13,23 @@
 # print(dict["cgpa"])
 # print(dict["Sem"])
 # print(dict["course"])
+
+
+info = {
+    "key" : "value",
+    "name":"apnacollege",
+    "learning": "coding",
+    "age":"20",
+    "is_adult":"true",
+    "marks":"94.5"
+
+}
+
+print(info)
+
+# add list truple
+
+
 
 
 
