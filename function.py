@@ -60,24 +60,22 @@
 # greet (user-)
 
 
-def user_profile (name="vivek",follower="0",following="2400",post="45"):
-    print(name)
-    print(follower)
-    print(following)
-    print(post)
-    user_profile("vivek","0","2400","45")
-user_profile("vivek","0","2400")
-user_profile("ratan","4")
-user_profile("neeraj")
-user_profile()
 
 
 
 
 def calc(number):
-     return sum(number)
-list[17,17,16,18,19]
-calc()
+     sum=0
+     for num in number:
+          sum+=num
+     return sum
+marks_l=[17,17,16,18,19]
+marks_t=(24,45,56,65,34)
+marks_s={40,34,66,45,34}
+print("Sum of marks in list:",calc(marks_l))
+print("Sum of marks in tuple:",calc(marks_t))
+print("Sum of marks in set:", calc(marks_s))
+
 
 
 
