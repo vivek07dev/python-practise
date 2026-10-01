@@ -54,10 +54,30 @@
 # greet("vivek","19")
 
 
-def greet(name):
-    print("hello",name)
-user-name = input("Enter name")
-greet (user-)
+# def greet(name):
+#     print("hello",name)
+# user-name = input("Enter name")
+# greet (user-)
+
+
+def user_profile (name="vivek",follower="0",following="2400",post="45"):
+    print(name)
+    print(follower)
+    print(following)
+    print(post)
+    user_profile("vivek","0","2400","45")
+user_profile("vivek","0","2400")
+user_profile("ratan","4")
+user_profile("neeraj")
+user_profile()
+
+
+
+
+def calc(number):
+     return sum(number)
+list[17,17,16,18,19]
+calc()
 
 
 
