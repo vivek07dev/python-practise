@@ -64,26 +64,25 @@
 
 
 
-def calc(number):
-     sum=0
-     for num in number:
-          sum+=num
-     return sum
-marks_l=[17,17,16,18,19]
-marks_t=(24,45,56,65,34)
-marks_s={40,34,66,45,34}
-print("Sum of marks in list:",calc(marks_l))
-print("Sum of marks in tuple:",calc(marks_t))
-print("Sum of marks in set:", calc(marks_s))
+# def calc(number):
+#      sum=0
+#      for num in number:
+#           sum+=num
+#      return sum
+# marks_l=[17,17,16,18,19]
+# marks_t=(24,45,56,65,34)
+# marks_s={40,34,66,45,34}
+# print("Sum of marks in list:",calc(marks_l))
+# print("Sum of marks in tuple:",calc(marks_t))
+# print("Sum of marks in set:", calc(marks_s))
 
 
 
 
+# def print_even(numbers):
+#     for num in numbers:
+#         if num%2==0:
+#             print(num)
+# list1=[1,2,3,4,5,6,7,8,9]   
+# print_even(list1)
 
-
-
-
-
- 
-
-   
