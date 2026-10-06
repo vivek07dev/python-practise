@@ -92,7 +92,8 @@ def quick_sort(arr):
     return quick_sort(left) + [pivot] + quick_sort(right)
 
 
-arr = [33,56,34,12, 22, 11, 90]
+arr = [
+    33,56,34,12, 22, 11, 90]
 
 arr = quick_sort(arr)
 
