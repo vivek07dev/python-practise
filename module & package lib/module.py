@@ -11,8 +11,9 @@
 
 #import/use sepecific part of code
 
-from mymodule import person1
-print(person1['age'])
+# from mymodule import person1
+# print(person1['age'])
 
 
 # package:collection modules/py file +__init__
+
