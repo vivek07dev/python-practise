@@ -1,0 +1,80 @@
+# Create a function greet() that prints: Welcome to Python 
+def greet():
+    print("Welcome to Python")
+greet()
+
+
+#2.Create a function that accepts a person's name and prints: Hello Rahul 
+
+def greet():
+    print("hello vivek")
+greet()
+
+#3..Create a function that accepts two numbers and returns their sum. 
+def add(a,b):
+    return a+b
+print("addition=", add(23,23))
+
+#4Create functions for: • Addition  • Subtraction  • Multiplication  • Division  
+def add(a,b):
+    return a + b
+
+def sub(a,b):
+    return a -b
+
+def mult(a,b):
+    return a *b
+
+def div(a,b):
+    return a -b
+
+print("addition=",add(10,34))
+print("subtraction=",sub(30,23))
+print("multiplication=",mult(10,34))
+print("division=",div(30,23))
+
+#5Create a function that accepts a number and returns its square. 
+def squre(n):
+    return n*n
+print("squre=",squre(5))
+
+#6Create a function that accepts a number and returns its cube. 
+
+def cube(n):
+    return n*n*n
+print("cube=",cube(6))
+
+#7Create a function that accepts a number and returns whether it is even or odd.
+def check_number(n):
+    if n % 2 ==0:
+        return "even"
+    else:
+        return "odd"
+
+print(check_number(10))
+print(check_number,(7))
+
+#8..Create a function that accepts three numbers and returns the largest number
+
+def largest(a,b,c):
+    return max (a,b,c)
+print("largest=",largest(23,67,78))
+
+
+#9 Create a function to calculate simple interest. Formula: SI = (P × R × T) / 100
+
+def simple_interest(p,r,t):
+    return(p*r*t)/100
+p = 1000
+r = 6
+t = 3
+
+print("simple interest=",simple_interest(p,r,t))
+
+#10..Create a function to convert Celsius into Fahrenhei
+def celsius_to_fahrenhei(c):
+    return (c*9/5)+32
+c = float(input("enter temperature in celcius:"))
+f =celsius_to_fahrenhei(c)
+print("Temperature in fahreheight:",f)
+
