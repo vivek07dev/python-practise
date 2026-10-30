@@ -13,4 +13,4 @@ def detail(Person):
 G1 = GrandParent()
 P1 = Parent()
 G1.Age()
-P1.Age()
+P1.Age() 
