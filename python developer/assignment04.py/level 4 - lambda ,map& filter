@@ -1,0 +1,26 @@
+# Q25: Use a lambda function to return the square of a number.
+square = lambda number: number * number
+print("Square:", square(5))
+
+
+# Q26: Use a lambda function to add two numbers.
+add = lambda first, second: first + second
+print("Sum:", add(10, 20))
+
+
+# Q27: Use map() to return the square of every number in a list.
+numbers = [1, 2, 3, 4, 5]
+squares = list(map(lambda number: number * number, numbers))
+print("Squares:", squares)
+
+
+# Q28: Use filter() to return all even numbers from a list.
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = list(filter(lambda number: number % 2 == 0, numbers))
+print("Even numbers:", even_numbers)
+
+
+# Q29: Use filter() to return words longer than four characters.
+words = ["apple", "cat", "banana", "dog"]
+long_words = list(filter(lambda word: len(word) > 4, words))
+print("Words longer than four characters:", long_words)

@@ -1,0 +1,157 @@
+# Q35: Take marks for five subjects and display the student's result.
+def get_marks():
+    marks = []
+    for subject in range(1, 6):
+        while True:
+            try:
+                mark = float(input(f"Enter marks for subject {subject} (0-100): "))
+                if 0 <= mark <= 100:
+                    marks.append(mark)
+                    break
+                print("Marks must be between 0 and 100.")
+            except ValueError:
+                print("Please enter a valid number.")
+    return marks
+
+
+def calculate_total(marks):
+    return sum(marks)
+
+
+def calculate_percentage(marks):
+    return calculate_total(marks) / (len(marks) * 100) * 100
+
+
+def calculate_grade(percentage):
+    if percentage >= 90:
+        return "A"
+    if percentage >= 80:
+        return "B"
+    if percentage >= 70:
+        return "C"
+    if percentage >= 60:
+        return "D"
+    return "F"
+
+
+def display_result(marks):
+    total = calculate_total(marks)
+    percentage = calculate_percentage(marks)
+    grade = calculate_grade(percentage)
+
+    print("\nStudent Result")
+    for subject, mark in enumerate(marks, start=1):
+        print(f"Subject {subject}: {mark:g}")
+    print(f"Total: {total:g} / {len(marks) * 100}")
+    print(f"Percentage: {percentage:.2f}%")
+    print("Grade:", grade)
+
+
+# Q36: Create a number analyzer with separate functions for input, sum, average,
+# maximum, minimum, and counting even and odd numbers.
+def input_numbers():
+    while True:
+        try:
+            numbers = [
+                int(value.strip())
+                for value in input("Enter integers separated by commas: ").split(",")
+            ]
+            if numbers:
+                return numbers
+            print("Please enter at least one number.")
+        except ValueError:
+            print("Please enter valid integers separated by commas.")
+
+
+def calculate_sum(numbers):
+    return sum(numbers)
+
+
+def calculate_average(numbers):
+    return calculate_sum(numbers) / len(numbers)
+
+
+def find_maximum(numbers):
+    return max(numbers)
+
+
+def find_minimum(numbers):
+    return min(numbers)
+
+
+def count_even(numbers):
+    return sum(1 for number in numbers if number % 2 == 0)
+
+
+def count_odd(numbers):
+    return sum(1 for number in numbers if number % 2 != 0)
+
+
+def analyze_numbers():
+    numbers = input_numbers()
+    print("Sum:", calculate_sum(numbers))
+    print("Average:", calculate_average(numbers))
+    print("Maximum:", find_maximum(numbers))
+    print("Minimum:", find_minimum(numbers))
+    print("Even numbers:", count_even(numbers))
+    print("Odd numbers:", count_odd(numbers))
+
+
+# Q37: Create a menu-driven calculator where every operation has its own function.
+def add(first, second):
+    return first + second
+
+
+def subtract(first, second):
+    return first - second
+
+
+def multiply(first, second):
+    return first * second
+
+
+def divide(first, second):
+    return first / second
+
+
+def power(first, second):
+    return first**second
+
+
+def run_calculator():
+    operations = {
+        "1": ("Add", add),
+        "2": ("Subtract", subtract),
+        "3": ("Multiply", multiply),
+        "4": ("Divide", divide),
+        "5": ("Power", power),
+    }
+
+    while True:
+        print("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Power\n6. Exit")
+        choice = input("Choose an option: ").strip()
+        if choice == "6":
+            print("Calculator closed.")
+            return
+        if choice not in operations:
+            print("Invalid option. Choose a number from 1 to 6.")
+            continue
+
+        try:
+            first = float(input("Enter the first number: "))
+            second = float(input("Enter the second number: "))
+        except ValueError:
+            print("Please enter valid numbers.")
+            continue
+
+        operation_name, operation = operations[choice]
+        if choice == "4" and second == 0:
+            print("Cannot divide by zero.")
+            continue
+        print(f"{operation_name} result:", operation(first, second))
+
+
+if __name__ == "__main__":
+    display_result(get_marks())
+    analyze_numbers()
+    run_calculator()

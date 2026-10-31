@@ -1,0 +1,116 @@
+# Create a function that accepts a list and returns its total
+def total(numbers):
+    result = 0
+    for number in numbers:
+        result += number
+    return result
+numbers = [1, 2, 3, 4, 5, 6]
+print("Total:", total(numbers))
+
+
+# Create a function that accepts a list and returns the largest number without using max().
+def largest_number(numbers):
+    if not numbers:
+        raise ValueError("numbers must not be empty")
+
+    largest = numbers[0]
+    for number in numbers[1:]:
+        if number > largest:
+            largest = number
+    return largest
+
+numbers = [1, 2, 3, 4, 5, 6]
+print("Largest number:", largest_number(numbers))
+
+# Create a function that accepts a list and returns the smallest number without using min().
+def smallest_number(numbers):
+    if not numbers:
+        raise ValueError("numbers must not be empty")
+
+    smallest = numbers[0]
+    for number in numbers[1:]:
+        if number < smallest:
+            smallest = number
+    return smallest
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+print("Smallest number:", smallest_number(numbers))
+
+# Create a function that counts how many even numbers are present in a list.
+def count_even(numbers):
+    count = 0
+    for number in numbers:
+        if number % 2 == 0:
+            count += 1
+    return count
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+print("Even number count:", count_even(numbers))
+
+# Create a function that returns all even numbers from a list.
+def even_numbers(numbers):
+    result = []
+    for number in numbers:
+        if number % 2 == 0:
+            result.append(number)
+    return result
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+print("Even numbers:", even_numbers(numbers))
+
+
+# Create a function that accepts a string and returns the number of vowels.
+def count_vowels(text):
+    count = 0
+    for character in text.lower():
+        if character in "aeiou":
+            count += 1
+    return count
+
+
+text = "Hello World"
+print("Vowel count:", count_vowels(text))
+
+
+# Create a function that checks whether a string is a palindrome.
+def is_palindrome(text):
+    text = text.casefold()
+    return text == text[::-1]
+
+
+text = "madam"
+print("Is palindrome:", is_palindrome(text))
+
+
+# Create a function that accepts student information and displays it clearly.
+def display_student(student):
+    for key, value in student.items():
+        print(f"{key.title()}: {value}")
+
+
+student = {"name": "Rahul", "age": 20, "grade": "A"}
+display_student(student)
+
+
+# Create a function that accepts a tuple of numbers and returns their sum.
+def tuple_sum(numbers):
+    result = 0
+    for number in numbers:
+        result += number
+    return result
+
+
+values = (1, 2, 3, 4, 5)
+print("Tuple sum:", tuple_sum(values))
+
+
+# Create a function that accepts a set and returns its number of unique elements.
+def unique_count(values):
+    return len(values)
+
+
+items = {1, 2, 3, 4, 5}
+print("Unique elements:", unique_count(items))

@@ -1,0 +1,45 @@
+# Q21: Create a function using *args that returns the sum of all numbers passed to it.
+# Example: add(10, 20, 30, 40) Expected: 100
+def add(*args):
+    total = 0
+    for number in args:
+        total += number
+    return total
+
+
+print("Sum:", add(10, 20, 30, 40))
+
+
+# Q22: Create a function using *args that returns the largest number.
+def largest_number(*args):
+    if not args:
+        raise ValueError("At least one number is required")
+
+    largest = args[0]
+    for number in args[1:]:
+        if number > largest:
+            largest = number
+    return largest
+
+
+print("Largest number:", largest_number(10, 20, 30, 40))
+
+
+# Q23: Create a function using **kwargs that displays student information.
+# Example: student(name="Rahul", age=20, branch="CSE")
+def student(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key.title()}: {value}")
+
+
+student(name="Rahul", age=20, branch="CSE")
+
+
+# Q24: Create a function with a default country parameter set to "India".
+# If another country is provided, display that country instead.
+def display_country(country="India"):
+    print("Country:", country)
+
+
+display_country()
+display_country("Japan")

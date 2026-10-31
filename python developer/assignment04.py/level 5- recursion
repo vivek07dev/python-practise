@@ -1,0 +1,210 @@
+# # Q31: Create a recursive function to print numbers from 1 to n.
+# def print_numbers(n):
+#     if n < 1:
+#         return
+#     print_numbers(n - 1)
+#     print(n)
+
+
+# print("Numbers from 1 to 5:")
+# print_numbers(5)
+
+
+# # Q32: Create a recursive function to calculate factorial.
+# def factorial(n):
+#     if n < 0:
+#         raise ValueError("Factorial is not defined for negative numbers")
+#     if n == 0:
+#         return 1
+#     return n * factorial(n - 1)
+
+
+# print("Factorial of 5:", factorial(5))
+
+
+# # Q33: Create a recursive function to calculate the sum of numbers from 1 to n.
+# def sum_to_n(n):
+#     if n < 0:
+#         raise ValueError("n must not be negative")
+#     if n == 0:
+#         return 0
+#     return n + sum_to_n(n - 1)
+
+
+# print("Sum from 1 to 5:", sum_to_n(5))
+
+
+# # Q34: Create a recursive function to calculate the nth Fibonacci number.
+# def fibonacci(n):
+#     if n < 0:
+#         raise ValueError("n must not be negative")
+#     if n < 2:
+#         return n
+#     return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+# print("Fibonacci number at position 6:", fibonacci(6))
+
+# Q35: Student Result
+def get_marks():
+    marks = []
+
+    for subject in range(1, 6):
+        while True:
+            try:
+                mark = float(input(f"Subject {subject} ke marks (0-100): "))
+                if 0 <= mark <= 100:
+                    marks.append(mark)
+                    break
+                print("Marks 0 se 100 ke beech hone chahiye.")
+            except ValueError:
+                print("Valid number enter karein.")
+
+    return marks
+
+
+def calculate_total(marks):
+    return sum(marks)
+
+
+def calculate_percentage(marks):
+    return calculate_total(marks) / (len(marks) * 100) * 100
+
+
+def calculate_grade(percentage):
+    if percentage >= 90:
+        return "A"
+    elif percentage >= 80:
+        return "B"
+    elif percentage >= 70:
+        return "C"
+    elif percentage >= 60:
+        return "D"
+    return "F"
+
+
+def display_result(marks):
+    total = calculate_total(marks)
+    percentage = calculate_percentage(marks)
+    grade = calculate_grade(percentage)
+
+    print("\nStudent Result")
+    for subject, mark in enumerate(marks, start=1):
+        print(f"Subject {subject}: {mark:g}")
+    print(f"Total: {total:g} / {len(marks) * 100}")
+    print(f"Percentage: {percentage:.2f}%")
+    print("Grade:", grade)
+
+
+# Q36: Number Analyzer
+def input_numbers():
+    while True:
+        try:
+            numbers = [
+                int(value.strip())
+                for value in input("Comma se numbers enter karein: ").split(",")
+            ]
+            if numbers:
+                return numbers
+            print("Kam se kam ek number enter karein.")
+        except ValueError:
+            print("Valid integers comma se separate karke enter karein.")
+
+
+def calculate_sum(numbers):
+    return sum(numbers)
+
+
+def calculate_average(numbers):
+    return calculate_sum(numbers) / len(numbers)
+
+
+def find_maximum(numbers):
+    return max(numbers)
+
+
+def find_minimum(numbers):
+    return min(numbers)
+
+
+def count_even(numbers):
+    return sum(1 for number in numbers if number % 2 == 0)
+
+
+def count_odd(numbers):
+    return sum(1 for number in numbers if number % 2 != 0)
+
+
+def analyze_numbers():
+    numbers = input_numbers()
+    print("Sum:", calculate_sum(numbers))
+    print("Average:", calculate_average(numbers))
+    print("Maximum:", find_maximum(numbers))
+    print("Minimum:", find_minimum(numbers))
+    print("Even numbers:", count_even(numbers))
+    print("Odd numbers:", count_odd(numbers))
+
+
+# Q37: Menu-Driven Calculator
+def add(first, second):
+    return first + second
+
+
+def subtract(first, second):
+    return first - second
+
+
+def multiply(first, second):
+    return first * second
+
+
+def divide(first, second):
+    return first / second
+
+
+def power(first, second):
+    return first ** second
+
+
+def run_calculator():
+    operations = {
+        "1": ("Add", add),
+        "2": ("Subtract", subtract),
+        "3": ("Multiply", multiply),
+        "4": ("Divide", divide),
+        "5": ("Power", power),
+    }
+
+    while True:
+        print("\n1. Add\n2. Subtract\n3. Multiply")
+        print("4. Divide\n5. Power\n6. Exit")
+
+        choice = input("Option choose karein: ").strip()
+
+        if choice == "6":
+            print("Calculator band.")
+            return
+
+        if choice not in operations:
+            print("Invalid option. 1 se 6 tak choose karein.")
+            continue
+
+        try:
+            first = float(input("Pehla number: "))
+            second = float(input("Doosra number: "))
+        except ValueError:
+            print("Valid numbers enter karein.")
+            continue
+
+        if choice == "4" and second == 0:
+            print("Zero se divide nahi kar sakte.")
+            continue
+
+        operation_name, operation = operations[choice]
+        print(f"{operation_name} result:", operation(first, second))
+
+
+if __name__ == "__main__":
+    display_result(get_marks())
+    analyze_numbers()
+    run_calculator()
