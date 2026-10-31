@@ -1,37 +1,4 @@
-
-
-# from abc import  Abc ,abstractmethod
-# class vehicle (Abc):
-#     @abstractmethod
-#     def start(self):
-#         pass
-#     def stop(self):
-#         self.stop
-
-# class car (vehicle):
-#     def start(self):
-#        print("car is starting")
-#     def stop(self):
-#        print("car is stopping")
-
-
-# class bike (vehicle):
-#     def start (self):
-#         print(bike is self.starting)
-#     def stop(self):
-#         print("bike is stopping")
-
-
-# s1= car()      
-# s2 = vehicle()
-# s1.start()
-# s2.stop()
-# s1.start()
-# s2.start()
-# s2.miles()
-
-
-
+# abstraction in python is an oops concept .that hides implementation details and shows only essential features to the user.
 
 
 from abc import  ABC ,abstractmethod
